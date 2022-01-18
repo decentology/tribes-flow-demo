@@ -1,0 +1,46 @@
+{
+  "name": "flow-tribes-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@decentology/hyperverse": "^0.1.4",
+    "@decentology/hyperverse-flow": "^0.1.1",
+    "@decentology/hyperverse-flow-tribes": "^0.1.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "fastify": "^3.25.3",
+    "fastify-static": "^4.5.0",
+    "https-browserify": "^1.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "nodemonConfig": {
+    "env": {
+      "MODE": "development"
+    }
+  },
+  "scripts": {
+    "client": "webpack --mode development --watch",
+    "client:production": "webpack --mode development",
+    "server": "nodemon --experimental-specifier-resolution=node main.js",
+    "clean": "rm -rf node_modules && rm yarn.lock && yarn"
+  }
+}
